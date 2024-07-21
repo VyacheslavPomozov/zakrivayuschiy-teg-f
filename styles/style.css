@@ -20,7 +20,7 @@
   justify-content: center;
   min-inline-size: 320px;
   font-family: var(--main-font, sans-serif), sans-serif;
-  font-variation-settings: "wdth" var(--main-font-weight, sans-serif);
+  font-variation-settings: "wght" var(--main-font-weight);
   background-color: var(--bg-color, #fff);
   color: var(--accent-color, #000);
   background-image: var(--backgroung-value);
@@ -135,7 +135,7 @@
 .main__title {
   font-size: 18px;
   color: currentColor;
-  font-weight: var(--main-font-title-weight, 700);
+  font-variation-settings: "wght" var(--main-font-title-weight);
   border-bottom: 2px solid var(--accent-color, #000);
   padding: 3px 10px;
 }
