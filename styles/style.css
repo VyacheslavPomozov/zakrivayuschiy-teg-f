@@ -208,7 +208,7 @@
   background-color: transparent;
   cursor: pointer;
   border: 2px solid var(--accent-color, #000);
-  transition: all 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out;
 }
 
 .card__like-button {
@@ -242,7 +242,7 @@
   width: 0px;
   min-height: 36px;
   background: var(--accent-color, #000);
-  transition: all 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
 }
 
 .main__button:hover::before {
@@ -409,8 +409,7 @@ dialog::backdrop {
 }
 
 .filter_multiple {
-  filter: saturate(250%);
-  filter: hue-rotate(0.5turn);
+  filter: saturate(250%) hue-rotate(0.5turn);
 }
 
 @media (width <= 645px) {
