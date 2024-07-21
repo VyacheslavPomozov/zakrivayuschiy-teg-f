@@ -24,7 +24,7 @@
       transparent 4px
     ),
     linear-gradient(#e7e7e7, #e7e7e7 0.01%, #1a1a1a);
-  --label-stroke-color: rgba(255, 255, 255, 0.8);
+  --label-stroke-color: rgba(255, 255, 255);
   --main-button-color: #fff;
   --heart-contour-color: #000;
 }
@@ -43,7 +43,7 @@
     ),
     repeating-linear-gradient(#000, #000 2px, transparent 2px, transparent 4px),
     linear-gradient(#007f0c, #007f0c 0.01%, #004306);
-  --label-stroke-color: rgba(0, 0, 0, 0.8);
+  --label-stroke-color: rgba(0, 0, 0);
   --main-button-color: #00cc14;
   --heart-contour-color: #00cc14;
 }
@@ -68,7 +68,7 @@
         transparent 4px
       ),
       linear-gradient(#007f0c, #007f0c 0.01%, #004306);
-    --label-stroke-color: rgba(0, 0, 0, 0.8);
+    --label-stroke-color: rgba(0, 0, 0);
     --main-button-color: #00cc14;
     --heart-contour-color: #00cc14;
   }

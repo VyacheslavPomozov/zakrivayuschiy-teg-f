@@ -20,7 +20,7 @@
       transparent 4px
     ),
     linear-gradient(#e7e7e7, #e7e7e7 0.01%, #1a1a1a);
-  --label-stroke-color: rgba(255, 255, 255, 0.8);
+  --label-stroke-color: rgba(255, 255, 255);
   --main-button-color: #fff;
   --heart-contour-color: #000;
   --heart-filling-color: #ff0000;

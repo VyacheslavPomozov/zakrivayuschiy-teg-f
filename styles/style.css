@@ -27,6 +27,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  padding-block-end: 100px;
 }
 
 .header {
@@ -35,13 +36,13 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  min-height: 368px;
+  row-gap: 20px;
   background-color: var(--bg-color, #fff);
   border: 2px solid var(--accent-color, #000);
 }
 
 .header__logo {
-  font-family: var(--accent-font, sans-serif), sans-serif;
+  font-family: var(--accent-font, fantasy), fantasy;
   font-size: clamp(3.0625rem, 2.4847rem + 2.4653vw, 4.0625rem);
   color: var(--accent-color, #000);
   text-transform: uppercase;
@@ -49,7 +50,7 @@
 }
 
 .header__title {
-  font-family: var(--accent-font, sans-serif), sans-serif;
+  font-family: var(--accent-font, fantasy), fantasy;
   font-size: clamp(0.875rem, 0.55rem + 1.3867vw, 1.4375rem);
   font-weight: 400;
   color: var(--accent-color, #000);
@@ -58,7 +59,7 @@
 }
 
 .header__theme-menu {
-  font-family: var(--accent-font, sans-serif), sans-serif;
+  font-family: var(--accent-font, fantasy), fantasy;
   padding-block-end: 25px;
 }
 
@@ -86,13 +87,6 @@
   opacity: 0.6;
 }
 
-.theme-menu__button:disabled::before {
-  content: "▶";
-  position: absolute;
-  left: -15px;
-  animation: movingArrow 0.5s infinite ease-in-out alternate;
-}
-
 .theme-menu__button:hover {
   opacity: 0.6;
   transition: opacity 0.3s;
@@ -101,23 +95,6 @@
 .theme-menu__button:focus {
   outline: none;
   opacity: 0.6;
-}
-
-.theme-menu__button::after {
-  content: "";
-  position: absolute;
-  left: 0px;
-  bottom: -1px;
-  width: 100%;
-  height: 2px;
-  background-color: var(--accent-color, #fff);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-
-.theme-menu__button:focus-visible::after {
-  transform: scaleX(1);
 }
 
 .main {
@@ -150,7 +127,7 @@
   top: 28px;
   right: 26px;
   z-index: 1;
-  font-family: var(--accent-font, sans-serif), sans-serif;
+  font-family: var(--accent-font, fantasy), fantasy;
   font-size: 14px;
   text-transform: uppercase;
   mix-blend-mode: hard-light;
@@ -228,94 +205,22 @@
 
 .card__icon-button:focus-visible {
   border: 2px solid var(--accent-color, #000);
+  outline: none;
 }
 
 .main__button:focus-visible {
   box-shadow: 2px 2px 0 0 var(--accent-color, #000);
-}
-
-.main__button::before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 0px;
-  min-height: 36px;
-  background: var(--accent-color, #000);
-  transition: width 0.5s ease-in-out;
-}
-
-.main__button:hover::before {
-  width: 100%;
+  outline: none;
 }
 
 .button__text {
   position: relative;
   z-index: 1;
-  font-family: var(--accent-font, sans-serif), sans-serif;
+  font-family: var(--accent-font, fantasy), fantasy;
   font-size: 14px;
   line-height: 90%;
   color: var(--main-button-color, #000);
   mix-blend-mode: difference;
-}
-
-.sparks {
-  opacity: 0;
-}
-
-.core {
-  fill: transparent;
-  transition: fill 0.3s linear;
-}
-
-.like-icon:hover .core {
-  fill: var(--heart-contour-color, #000);
-  transition: fill 0.3s linear 0.03s;
-}
-
-.like-icon:active .core {
-  fill: var(--heart-filling-color, #ff0000);
-  transition: fill 0.3s linear 0.03s;
-}
-
-.main-body {
-  fill: transparent;
-  transition: fill 0.3s linear 0.05s;
-}
-
-.like-icon:hover .main-body {
-  fill: var(--heart-contour-color, #000);
-  transition: fill 0.3s linear;
-}
-
-.like-icon:active .main-body {
-  fill: var(--heart-filling-color, #ff0000);
-  transition: fill 0.3s linear;
-}
-
-.contour {
-  transition: fill 0.3s linear 0.06s;
-}
-
-.like-icon.is-liked .core,
-.like-icon.is-liked .main-body,
-.like-icon.is-liked .contour {
-  fill: var(--heart-filling-color, #ff0000);
-}
-
-.like-icon.is-liked .heart {
-  animation: heart-like-scale 0.3s ease-in 0.1s alternate;
-  transform-origin: center;
-}
-
-.like-icon.is-liked .sparks {
-  animation: heart-like-sparks 0.3s ease-in 0.3s alternate;
-  transform-origin: center;
-}
-
-.like-icon:not(.is-liked) .contour {
-  fill: var(--heart-contour-color, #000);
-  transition: fill 0.1s linear;
 }
 
 .main__save-button {
@@ -327,10 +232,6 @@
   min-width: 335px;
   min-height: 55px;
   background-color: var(--bg-color, #fff);
-}
-
-.main__save-button::before {
-  min-height: 53px;
 }
 
 .main__save-button-icon {
@@ -413,10 +314,6 @@ dialog::backdrop {
 }
 
 @media (width <= 645px) {
-  .header {
-    min-height: 327px;
-  }
-
   .header__logo {
     padding: 120px 14px 0;
   }
@@ -439,7 +336,7 @@ dialog::backdrop {
     height: 28px;
   }
 
-  .main__save-button::before {
-    min-height: 80px;
+  .main__label {
+    right: 13px;
   }
 }
