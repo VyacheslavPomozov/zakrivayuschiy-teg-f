@@ -1,17 +1,27 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-    --main-font: "Inter";
-    --accent-font: "PressStart2P";
-    --main-font-weight: 400;
-    --main-font-title-weight: 700;
-    --bg-color: #fff;
-    --accent-color: #000;
-    --backgroung-value: 
-        repeating-linear-gradient(-90deg, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
-        repeating-linear-gradient(#d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
-        linear-gradient(#e7e7e7, #e7e7e7 0.01%, #1a1a1a);
-    --label-stroke-color: rgba(255, 255, 255, 0.8);
-    --main-button-color: #fff;
-    --heart-contour-color: #000;
-    --heart-filling-color: #ff0000;
+  --main-font: "Inter";
+  --accent-font: "PressStart2P";
+  --main-font-weight: 400;
+  --main-font-title-weight: 700;
+  --bg-color: #fff;
+  --accent-color: #000;
+  --backgroung-value: repeating-linear-gradient(
+      -90deg,
+      #d3d3d3,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      #d3d3d3,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(#e7e7e7, #e7e7e7 0.01%, #1a1a1a);
+  --label-stroke-color: rgba(255, 255, 255, 0.8);
+  --main-button-color: #fff;
+  --heart-contour-color: #000;
+  --heart-filling-color: #ff0000;
 }
